@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bienvenid@</title>
+    <link rel="stylesheet" type="text/css" href="Pagina.css">
+    <style>
+
+        html {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 25px;
+    background-color: #ffcd37;
+}
+
+#contenedor {
+    margin: 30px 300px;
+    width: 300px;
+    text-align: center;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    background-color: #000000;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#reglas {
+    position: fixed;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    margin-top: -350px; /* Negative half of height. */
+    margin-left: -300px; /* Negative half of width. */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #000000;
+    color:white;
+    border-radius: 10px;
+}
+
+#premios {
+    position: fixed;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -350px; /* Negative half of height. */
+    margin-left: -250px; /* Negative half of width. */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #000000;
+    color:white;
+    border-radius: 10px;
+}
+
+p{
+    font-size: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Bienvenid@</h1>
+    <h3>Bienvenid@</h3>
+
+    <br><br>
+    <a href="concurso" id="contenedor">Iniciar</a>
+    <br><br><br>
+    <a href="reglas" id="contenedor">Reglas</a>
+    <br><br><br>
+    <a href="premios" id="contenedor">Premios</a>
+
+    <% if (alert) {%>
+        <a href="reglas" id="reglas" class="alert alert-<%= alert.type %>">
+          <h4>Reglas</h4>
+          <p>- En este juego te esperan 15 preguntas.</p>
+          <p>- Si fallas una, estás eliminad@.</p>
+          <p>- Tienes 1 vida y 3 comodines. Puedes elegir entre una vida extra y un comodin si aciertas la pregunta 5, y puedes recuperar otro comodin en la pregunta 10.</p>
+          <p>- Cada 5 preguntas acertadas, su dificultad aumentará.</p>
+          <p>- Comodin 50/50: Te quita dos opciones al azar.</p>
+          <p>- Comodin ruleta: Te quita el numero de opciones al azar.</p>
+          <p>- Comodin publico: Los espectadores te echan una mano.</p>
+          <p>- Comodin pregunta: Te cambia una pregunta por otra al azar.</p>
+        </a>
+      <% } %>
+
+      <% if (alert2) {%>
+        <a href="premios" id="premios" class="alert alert-<%= alert.type %>">
+          <p>15 - 10€ conseguidos</p>
+          <p>14 - &#128511; &#128511; &#128511;</p>
+          <p>13 - &#128511; &#128511; &#128511;</p>
+          <p>12 - &#128511; &#128511; &#128511;</p>
+          <p>11 - &#128511; &#128511; &#128511;</p>
+          <p>10 - 3€ conseguidos</p>
+          <p>9 - 😎😎😎</p>
+          <p>8 - 😎😎😎</p>
+          <p>7 - 😎😎😎</p>
+          <p>6 - 😎😎😎</p>
+          <p>5 - 1€ conseguido</p>
+          <p>4 - 🌸🌸🌸</p>
+          <p>3 - 🌸🌸🌸</p>
+          <p>2 - 🌸🌸🌸</p>
+          <p>1 - 🌸🌸🌸</p>
+        </a>
+      <% } %>
+
+
+</body>
+</html>

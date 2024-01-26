@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Concurso tal</title>
+    <link rel="stylesheet" type="text/css" href="Pagina.css">
+    <style>
+        html {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 25px;
+    background-color: #ffcd37;
+}
+
+#corazon {
+    text-align: left;
+    width: 40px;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#icono1 {
+    text-align: right;
+    width: 80px;
+}
+
+#icono2 {
+    text-align: right;
+    width: 80px;
+}
+
+#icono3 {
+    text-align: right;
+    width: 80px;
+}
+
+#icono4 {
+    text-align: right;
+    width: 80px;
+}
+
+.pr{
+    margin-left: 450px;
+}
+
+#rondas {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+#rondas div {
+    background-color: black;
+    color: white;
+    width: 40px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 40px;
+    font-size: 20px;
+}
+
+#contenedor {
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ff2b73;
+    background-color: #000000;
+}
+
+#pregunta {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+}
+
+#contenedorRespuestas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.respuesta {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-align: left;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #000000;
+}
+
+#opciones {
+    list-style-type: none;
+    padding: 0;
+}
+
+#opciones li {
+    margin: 10px;
+}
+
+#resolver {
+    visibility: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    background-color: rgb(120, 32, 179);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#siguiente {
+    visibility: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    background-color: #3b7eac;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+#premios {
+    position: fixed;
+    font-size: 20px;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -350px; /* Negative half of height. */
+    margin-left: -250px; /* Negative half of width. */
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #000000;
+    color:white;
+    border-radius: 10px;
+}
+#btnpremio{
+    text-align: center;
+    position: absolute;
+    left:10%;
+    bottom: 5%;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    background-color: #000000;
+}
+
+#ganar {
+    position: fixed;
+    font-size: 32px;
+    width: 1200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -350px; /* Negative half of height. */
+    margin-left: -600px; /* Negative half of width. */
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #000000;
+    color:white;
+    border-radius: 10px;
+}
+
+#btnvolver{
+    text-align: center;
+    position: absolute;
+    left:5%;
+    bottom: 5%;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    background-color: #000000;
+}
+
+#btncambiar{
+    text-align: center;
+    position: absolute;
+    right:5%;
+    bottom: 5%;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    background-color: #000000;
+}
+
+#btnmostrar{
+    text-align: center;
+    position: absolute;
+    right:10%;
+    top: 45%;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    background-color: #000000;
+}
+
+#btncorazon{
+    text-align: center;
+    margin-top: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    background-color: #000000;
+}
+
+#supercontenedor{
+    padding: 15px;
+    border: none;
+    border-radius: 16px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #000000;
+}
+
+    </style>
+</head>
+<body>
+    <h1>¿Quien quiere ser millonario?</h1>
+
+    <div id="">
+    <a href="/corazon" id="btncorazon">&#10084;</a>
+    <img id="corazon" style="visibility: <% if (corazon) { %> visible <% } else {  %> hidden <% } %>;" src="corazon.png">
+
+    <a href="/comodin1"><img id="icono1" style="opacity: <% if (comodin1) { %> 20% <% } else {  %> 100% <% } %>;" class="pr" src="icono50.png"></a>
+    <a href="/comodin2"><img id="icono2" style="opacity: <% if (comodin2) { %> 20% <% } else {  %> 100% <% } %>;" src="iconopublico.png"></a>
+    <a href="/comodin3"><img id="icono3" style="opacity: <% if (comodin3) { %> 20% <% } else {  %> 100% <% } %>;" src="iconoruleta.png"></a>
+    <a href="/comodin4"><img id="icono4" style="opacity: <% if (comodin4) { %> 20% <% } else {  %> 100% <% } %>;" src="iconoCambio.png"></a>
+
+    <div id="rondas">
+        <div <% if(cont>=2){ %> style="background-color: green;" <% } %>>1</div>
+        <div <% if(cont>=3){ %> style="background-color: green;" <% } %>>2</div>
+        <div <% if(cont>=4){ %> style="background-color: green;" <% } %>>3</div>
+        <div <% if(cont>=5){ %> style="background-color: green;" <% } %>>4</div>
+        <div <% if(cont>=6){ %> style="background-color: green;" <% } %>>5</div>
+        <div <% if(cont>=7){ %> style="background-color: green;" <% } %>>6</div>
+        <div <% if(cont>=8){ %> style="background-color: green;" <% } %>>7</div>
+        <div <% if(cont>=9){ %> style="background-color: green;" <% } %>>8</div>
+        <div <% if(cont>=10){ %> style="background-color: green;" <% } %>>9</div>
+        <div <% if(cont>=11){ %> style="background-color: green;" <% } %>>10</div>
+        <div <% if(cont>=12){ %> style="background-color: green;" <% } %>>11</div>
+        <div <% if(cont>=13){ %> style="background-color: green;" <% } %>>12</div>
+        <div <% if(cont>=14){ %> style="background-color: green;" <% } %>>13</div>
+        <div <% if(cont>=15){ %> style="background-color: green;" <% } %>>14</div>
+        <div <% if(cont>=16){ %> style="background-color: green;" <% } %>>15</div>
+    </div>
+    
+    <div id="contenedor">
+        <h2 id="pregunta"><%= pregunta %></h2>
+    </div>
+    <div id="contenedorRespuestas">
+        <a id="opcionA" href="opcionA" style="background-color: <% if(mostrarCorrecta=='a'){%> green <%} else if (mostrarIncorrecta=='a') {%> red <%} else if (marcado1) {%> violet <%} %>;
+        color: <% if(letra1 == 'a' || letra2 == 'a' || mostrarOpciones == false) { %> black <% } %>;" class="respuesta">a) <%= opcionA %></a>
+        <a id="opcionB" href="opcionB" style="background-color: <% if(mostrarCorrecta=='b'){%> green <%} else if (mostrarIncorrecta=='b') {%> red <%} else if (marcado2) {%> violet <%} %>;
+        color: <% if(letra1 == 'b' || letra2 == 'b' || mostrarOpciones == false) { %> black <% } %>;" class="respuesta">b) <%= opcionB %></a>
+        <a id="opcionC" href="opcionC" style="background-color: <% if(mostrarCorrecta=='c'){%> green <%} else if (mostrarIncorrecta=='c') {%> red <%} else if (marcado3) {%> violet <%} %>;
+        color: <% if(letra1 == 'c' || letra2 == 'c' || mostrarOpciones == false) { %> black <% } %>;" class="respuesta">c) <%= opcionC %></a>
+        <a id="opcionD" href="opcionD" style="background-color: <% if(mostrarCorrecta=='d'){%> green <%} else if (mostrarIncorrecta=='d') {%> red <%} else if (marcado4) {%> violet <%} %>;
+        color: <% if(letra1 == 'd' || letra2 == 'd' || mostrarOpciones == false) { %> black <% } %>;" class="respuesta">d) <%= opcionD %></a>
+    </div>
+    
+    <div style="display: grid; padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    grid-auto-rows: 50px;">
+        <a id="resolver" href="resolver" style="padding: 15px; visibility: <%= visible %>;">Resolver</a>
+        <a id="siguiente" href="siguiente" style="padding: 15px; visibility: <%= visible2 %>;">Siguiente Pregunta</a>
+    </div>
+    <a id="siguiente" href="final" style="padding: 15px; visibility: <% if(cont == 15 && ganar == true){ %> visible <% } else { %> hidden <% } %>;">Final</a>
+
+    </div>
+
+    <a href="/mostrar" id="btnmostrar">&#8681;</a>
+    <a href="/cambiar" id="btncambiar">&#8634;</a>
+    <a href="/" id="btnvolver">&#11013;</a>
+    <a href="concursoP" id="btnpremio">&#127942;</a>
+
+    <% if (alert2) {%>
+        <a href="concursoP" id="premios" class="alert alert-<%= alert.type %>">
+          <p>15 - 10€</p>
+          <p>14 - &#128511; &#128511; &#128511;</p>
+          <p>13 - &#128511; &#128511; &#128511;</p>
+          <p>12 - &#128511; &#128511; &#128511;</p>
+          <p>11 - &#128511; &#128511; &#128511;</p>
+          <p>10 - 3€</p>
+          <p>9 - 😎😎😎</p>
+          <p>8 - 😎😎😎</p>
+          <p>7 - 😎😎😎</p>
+          <p>6 - 😎😎😎</p>
+          <p>5 - 1€</p>
+          <p>4 - 🌸🌸🌸</p>
+          <p>3 - 🌸🌸🌸</p>
+          <p>2 - 🌸🌸🌸</p>
+          <p>1 - 🌸🌸🌸</p>
+        </a>
+      <% } %>
+
+</body>
+</html>

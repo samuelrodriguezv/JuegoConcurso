@@ -1,0 +1,139 @@
+html {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 25px;
+    background-color: #ffcd37;
+}
+
+#corazon {
+    text-align: left;
+    width: 40px;
+}
+#corazon2 {
+    text-align: left;
+    width: 40px;
+}
+#corazon3 {
+    text-align: left;
+    width: 40px;
+    visibility: hidden;
+}
+
+#icono1 {
+    text-align: right;
+    width: 80px;
+}
+
+#icono2 {
+    text-align: right;
+    width: 80px;
+}
+
+#icono3 {
+    text-align: right;
+    width: 80px;
+}
+
+#icono4 {
+    text-align: right;
+    width: 80px;
+}
+
+.pr{
+    margin-left: 450px;
+}
+
+#rondas {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+#rondas div {
+    background-color: black;
+    color: white;
+    width: 40px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 40px;
+    font-size: 20px;
+}
+
+#contenedor {
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ff2b73;
+    background-color: #000000;
+}
+
+#pregunta {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+}
+
+#contenedorRespuestas{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.respuesta {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px;
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-align: left;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #000000;
+}
+
+#opciones {
+    list-style-type: none;
+    padding: 0;
+}
+
+#opciones li {
+    margin: 10px;
+}
+
+
+#resolver {
+    visibility: hidden;
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    background-color: rgb(120, 32, 179);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#siguiente {
+    visibility: hidden;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    background-color: #3b7eac;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
